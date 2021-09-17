@@ -41,9 +41,9 @@ class BaseActions():
 
     def what_is_your_name(self, w, subfacts, conclusions, context):
         return make_answer([
-            "You can call me {bot_name}.",
-            "Call me {bot_name}.",
-            "My name is {bot_name}."
+            "You can call me {Topnet}.",
+            "Call me {Topnet}.",
+            "My name is {Topnet}."
         ], context)
 
     def what_you_can_do(self, w, subfacts, conclusions, context):
@@ -52,5 +52,5 @@ class BaseActions():
         ], context)
 
     def who_are_you(self, w, subfacts, conclusions, context):
-        return make_answer(["I am {bot_name} - a computer program designed to simulate conversation with human users."], context)
+        return make_answer(["I am {Topnet} - a computer program designed to simulate conversation with humain users."], context)
 
