@@ -61,12 +61,10 @@ class SmallTalkActions():
 
     def smalltalk_base(self, w, subfacts, conclusions, context):
         return(make_answer([
-            "Please tell me more.",
-            "Can you elaborate on that?",
-            "I see.",
-            "I'm not sure I understand you fully.",
-            "Please go on.",
+           
             "Tell me more about that.",
+            "i cant understand you",
+            "i dont uderstand you"
         ], subfacts, context))
 
     def smalltalk_i_cant(self, w, subfacts, conclusions, context):
@@ -145,9 +143,8 @@ class SmallTalkActions():
 
     def smalltalk_i_have(self, w, subfacts, conclusions, context):
         return(make_answer([
-            "Why do you tell me that you've {X}?",
-            "Have you really {X}?",
-            "Now that you have {X}, what will you do next?",
+            "What is your {X}?",
+            "what kind of {X}?"
         ], subfacts, context))
 
     def smalltalk_i_would(self, w, subfacts, conclusions, context):
@@ -158,8 +155,7 @@ class SmallTalkActions():
         
     def smalltalk_my(self, w, subfacts, conclusions, context):
         return(make_answer([
-            "I see, your {X}.",
-            "Why do you say that your {X}?",
+            "I can see your {X}."
         ], subfacts, context))
 
     def smalltalk_perhaps(self, w, subfacts, conclusions, context):
@@ -176,9 +172,9 @@ class SmallTalkActions():
 
     def smalltalk_you_x_me(self, w, subfacts, conclusions, context):
         return(make_answer([
-            "Why do you think I {X} you?",
-            "What makes you think I {X} you?",
-            "Really, I {X} you?",
+            "Why do you think I {X} ?",
+            "What makes you think I {X} ?",
+            "Really, I {X} ?",
         ], subfacts, context))
 
     def smalltalk_different(self, w, subfacts, conclusions, context):
