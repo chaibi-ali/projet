@@ -5,34 +5,34 @@ include "../../common.rl3"
 annotation
     intent="smalltalk_i_am" [weight="0.01", X=x]
 search text
-    \<{I_AM}(\s{x_at_end}|\>)
+    \<{I AM|i am|am}(\s{stucked|in trouble}|\>)
 if
     true
 
 annotation
     intent="smalltalk_i_have" [weight="0.01", X=x]
 search text
-    \<(?i:{I} have)(\s{x_at_end}|\>)
+    \<(?i:{I|i} have)(\s{a problem|a trouble|a small problem}|\>)
 if
     true
 
 annotation
     intent="smalltalk_i_would" [weight="0.01", X=x]
 search text
-    \<(?i:{I} would)(\s{x_at_end}|\>)
+    \<(?i:{I|i} would (\s{change|delete}\>))
 if
     true
 
 annotation
     intent="smalltalk_i_cant" [weight="0.01", X=x]
 search text
-    \<{I} {CANT}(\s{x_at_end}|\>)
+    \<{i} {can't|cant})
 if
     true
 
 annotation
     intent="smalltalk_i_dont" [weight="0.01", X=x]
 search text
-    \<{I} {DONT}(\s{x_at_end}|\>)
+    \<{I|i} {DONT|dont|don't|cant|can't}(\s{connect|access|delete}|\>)
 if
     true
