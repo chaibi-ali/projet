@@ -1,0 +1,71 @@
+include "../../common.rl3"
+
+annotation
+    intent="smalltalk_base" [weight="0.001", X=x]
+search text
+    ^({x_at_end}|.*$)
+if
+    true
+
+#=== MENTION ===
+
+annotation
+    intent="smalltalk_yes" [weight="0.01"]
+search text
+    \<{YES|yeah}\>
+if
+    true
+
+annotation
+    intent="smalltalk_no" [weight="0.01"]
+search text
+    (\<(?i:(nope|nah|no|not))\>|^(?i:n+o+){EOS})
+if
+    true
+
+annotation
+    intent="smalltalk_perhaps" [weight="0.01", X=x]
+search text
+    \<(?i:perhaps|probably|may)(\s{x_at_end}|\>)
+if
+    true
+
+annotation
+    intent="smalltalk_because" [weight="0.01", X=x]
+search text
+    \<(?i:because|cause|thats why)(\s{x_at_end}|\>)
+if
+    true
+
+annotation
+    intent="smalltalk_sorry" [weight="0.01"]
+search text
+    \<{SORRY}\>
+if
+    true
+
+annotation
+    intent="smalltalk_hello" [weight="0.01"]
+search text
+    \<{HELLO|hi|psst|goodmorning|hey}\>
+if
+    true
+
+annotation
+    intent="smalltalk_different" [weight="0.01"]
+search text
+    \<(?i:different)\>
+if
+    true
+
+#=== AFFIRMATION ===
+
+annotation
+    intent="smalltalk_it_is" [weight="0.01", X=x]
+search text
+    \<{IT_IS}(\s{x_at_end}|\>)
+if
+    true
+
+
+

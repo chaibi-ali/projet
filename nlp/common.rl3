@@ -1,0 +1,5 @@
+include <common.rl3>
+include <phrases.rl3>
+
+pattern x_at_end [inline]
+    {x=[^!\.\?]+}{EOS}
