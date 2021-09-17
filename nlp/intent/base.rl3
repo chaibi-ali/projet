@@ -8,28 +8,28 @@ if
     true
 
 annotation
-    intent="bot name" [weight="1"]
+    intent="bot_name" [weight="1"]
 search text
     ^(?i:{ref last bot_name})\s*[!\.\?]?$
 if
     true
 
 annotation
-    intent="who are you" [weight="1"]
+    intent="who_are_you" [weight="1"]
 search text
-    \<({WHO_ARE_YOU}|{WHAT_IS} (?i:rl3\s?chat\s?bot|rl3\s?bot)){EOS}
+    \<({WHO ARE YOU } ){EOS}
 if
     true
 
 annotation
-    intent="what is your_name" [weight="1"]
+    intent="what_is_your_name" [weight="1"]
 search text
-    \<{WHAT_IS_YOUR_NAME}{EOS}
+    \<{WHAT IS YOUR NAME}{EOS}
 if
     true
 
 annotation
-    intent="what you can do" [weight="1"]
+    intent="what_you_can_do" [weight="1"]
 search text
     \<(?i:(what you can do|what can you do|what can i ask you|what you know|what are your features|what things you can do)){EOS}
 if
