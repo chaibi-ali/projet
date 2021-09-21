@@ -57,6 +57,6 @@ class Chatbot():
 
 class DefaultChatbot(Chatbot, BaseActions, SmallTalkActions):
     def __init__(self):
-        Chatbot.__init__(self, 'RL3Bot', './intent.rl3c')
+        Chatbot.__init__(self, 'Topnet', './intent.rl3c')
         BaseActions.__init__(self)
         SmallTalkActions.__init__(self)
